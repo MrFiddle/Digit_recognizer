@@ -1,13 +1,14 @@
-import cv2
 import numpy as np
-from matplotlib import pyplot as plt
+import cv2
 
-img = cv2.imread('test.jpg',0)
-edges = cv2.Canny(img,100,200)
+original = cv2.imread("5.jpg")
+gris = cv2.cvtColor(original, cv2.COLOR_BGR2GRAY)
+gauss = cv2.GaussianBlur(gris, (5,5), 0)
+canny = cv2.Canny(gauss, 50, 150)
+ 
+final = cv2.bitwise_not(canny)
 
-plt.subplot(121),plt.imshow(img,cmap = 'gray')
-plt.title('Original Image'), plt.xticks([]), plt.yticks([])
-plt.subplot(122),plt.imshow(edges,cmap = 'gray_r')
-plt.title('Edge Image'), plt.xticks([]), plt.yticks([])
+cv2.imshow("canny", final)
 
-plt.show()
+ 
+cv2.waitKey(0)
