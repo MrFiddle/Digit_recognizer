@@ -10,12 +10,9 @@ main_w.title('Proyecto | Computer Vision') # Title
 
 def hola():
 
-    msg = messagebox.showinfo("Hello Python", "Hello World")
-
-def hola_c():
-
-    print("Hola")
-
+    #print("Si")
+    msg = messagebox.showinfo("Botón", "Button test")
+    
 #Botones
 B = Button(main_w, text = "Boton", command = lambda: hola()).place(x = 50, y = 50)
 
