@@ -1,48 +1,57 @@
 from tkinter import *
 from tkinter import messagebox
 
-main_w = Tk()
+class App():
+    def __init__(self):
 
-#Config the window app
-main_w.geometry('800x500') # Size
-main_w.configure(bg = 'white') # Background color
-main_w.title('Proyecto | Computer Vision') # Title
+        main_w = Tk()
 
-def hola():
+        #Config the window app
+        main_w.geometry('800x500') # Size
+        main_w.configure(bg = 'white') # Background color
+        main_w.title('Proyecto | Computer Vision') # Title
 
-    #print("Si")
-    msg = messagebox.showinfo("Botón", "Button test")
-    
-#Botones
-B = Button(
-    
-    main_w,
-    text = "Tomar foto",
-    command = lambda: hola(),
-    width= 50,
-    justify = CENTER,
-    relief = FLAT,
-    font = "Arial",
+        def hola():
 
-    activebackground = "WHITE",
-    activeforeground = "BLACK",
+            #print("Si")
+            msg = messagebox.showinfo("Botón", "Button test")
+            
+        #Botones
+        B = Button(
+            
+            main_w,
+            text = "Tomar foto",
+            command = lambda: hola(),
+            width= 50,
+            justify = CENTER,
+            relief = FLAT,
+            font = "Arial",
 
-    background = "BLACK",
-    foreground = "WHITE",
-    
-    ).place(x = 170, y = 250)
+            activebackground = "WHITE",
+            activeforeground = "BLACK",
 
-#Labels
+            background = "BLACK",
+            foreground = "WHITE",
+            
+            ).place(x = 170, y = 250)
 
-L = Label(
-    main_w,
-    text = "Clasificador de números con bordes",
-    bg = "white",
-    pady = 40,
-    font = ("Bebas Neue", 30)
-)
+        #Labels
 
+        L = Label(
+            main_w,
+            text = "Clasificador de números con bordes",
+            bg = "white",
+            pady = 40,
+            font = ("Bebas Neue", 30)
+        )
 
-L.pack()
+        L.pack()
+        main_w.mainloop()
 
-main_w.mainloop()
+def main():
+
+    mi_app = App()
+    return 0
+
+if __name__ == '__main__':
+    main()
