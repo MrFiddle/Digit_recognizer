@@ -50,9 +50,9 @@ def pixel(image):
     img = Image.open(image)
     imgSmall = img.resize((28,28),resample=Image.BILINEAR)
     result = imgSmall.resize(img.size,Image.NEAREST)
-    result.save('resultado.png')
+    result.save('pixel.png')
 
 if __name__ == "__main__":
     image=cam()
-    pixel(image)
+    #pixel(image)
 
