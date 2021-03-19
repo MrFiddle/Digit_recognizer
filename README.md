@@ -4,7 +4,7 @@ Modelo modificado de: https://keras.io/examples/vision/mnist_convnet/ <br/>
 Author: fchollet <br/>
 https://github.com/keras-team/keras-io/blob/master/examples/vision/mnist_convnet.py <br/>
 
-## Librerias utilizdas para el programa
+## Librerias utilizadas para el programa
 
 * Python 3.8 <br/>
 * OpenCV 4.5.1.48<br/>
