@@ -1,15 +1,26 @@
+#Título: Fotografía cuadrada utilizando webcam
+#Autor:Brandon Josué Magaña Mendoza
+
 from PIL import Image
 import cv2
 import os
 
 def center_crop(img,dim):
-    #Recorta la imagen, acorde a las dimesiones indicadas
+    """
+    Recorta la imagen, acorde a las dimesiones indicadas, y la devuelve.
+
+    Args:
+        img: numpy array, que contiene a la foto recién capturada
+        dim: tupla, que contiene las dimensiones a las que se cortara la imagen
+    Return:
+        cropped: numpy array, imagen cortada con las dimensiones indicadas
+    """
     ancho, alto = img.shape[1], img.shape[0]
-    crop_ancho = dim[0] if dim[0]<img.shape[1] else img.shape[1]
-    crop_alto = dim[1] if dim[1]<img.shape[0] else img.shape[0]
+    crop_ancho = dim[0] if dim[0]<img.shape[1] else img.shape[1]#Determina el ancho que tendra el corte
+    crop_alto = dim[1] if dim[1]<img.shape[0] else img.shape[0]#Determina el largo que tendra el corte
     mid_x, mid_y = int(ancho/2), int(alto/2)
     crop_ancho2, crop_alto2 = int(crop_ancho/2), int(crop_alto/2) 
-    cropped = img[mid_y-crop_alto2:mid_y+crop_alto2, mid_x-crop_ancho2:mid_x+crop_ancho2]
+    cropped = img[mid_y-crop_alto2:mid_y+crop_alto2, mid_x-crop_ancho2:mid_x+crop_ancho2]#Captura la parte indicada
     return cropped
 
 def cam():
@@ -20,7 +31,7 @@ def cam():
 
     for images in test:
         if images.endswith(".png"):
-            os.remove(os.path.join(cwd, images))
+            os.remove(os.path.join(cwd, images))#elimina imagenes anteriores
 
     while True:
         check, frame = cam.read()
@@ -46,7 +57,12 @@ def cam():
     return "imagen.png"
 
 def pixel(image):
-    #Convierte imagen en resolución 28*28 pix, con la que trabajara la red neuronal
+    """
+    Convierte imagen en resolución 28*28 pix, con la que trabajara la red neuronal
+    
+    args:
+        image: numpy array, que contiene a la foto recortada
+    """
     img = Image.open(image)
     imgSmall = img.resize((28,28),resample=Image.BILINEAR)
     result = imgSmall.resize(img.size,Image.NEAREST)
