@@ -54,5 +54,5 @@ def pixel(image):
 
 if __name__ == "__main__":
     image=cam()
-    #pixel(image)
+    pixel(image)
 
