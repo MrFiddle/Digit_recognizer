@@ -1,6 +1,6 @@
 # TC1001S.1
 
-##Librerias utilizadas:
+Librerias utilizadas:</br>
 OpenCV
 numpy
 PIL
