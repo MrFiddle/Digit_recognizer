@@ -1,8 +1,8 @@
 # Clasificador de números con bordes | Semana TEC
 
-Modelo tomado de: https://keras.io/examples/vision/mnist_convnet/
-Author: fchollet
-https://github.com/keras-team/keras-io/blob/master/examples/vision/mnist_convnet.py
+Modelo tomado de: https://keras.io/examples/vision/mnist_convnet/ <br/>
+Author: fchollet <br/>
+https://github.com/keras-team/keras-io/blob/master/examples/vision/mnist_convnet.py <br/>
 
 ## Librerias utilizdas para el programa
 
