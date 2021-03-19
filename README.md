@@ -7,12 +7,11 @@ https://github.com/keras-team/keras-io/blob/master/examples/vision/mnist_convnet
 ## Librerias utilizdas para el programa
 
 * Python 3.8 <br/>
-* OpenCV <br/>
-* NumPy <br/>
-* Webcam <br/>
+* OpenCV 4.5.1.48<br/>
+* NumPy 1.19.5<br/>
+* Pillow 8.1.2<br/>
+* Tensorflow 2.4.1<br/>
 * OS <br/>
-* Pillow <br/>
-* Tensorflow <br/>
 
 
 ### TKinter en Linux
