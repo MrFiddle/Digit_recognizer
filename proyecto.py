@@ -1,12 +1,13 @@
 from tkinter import *
 from tkinter import messagebox
+from random import randint
 from Predictor import predice
 
 class App():
     def __init__(self):
 
         main_w = Tk()
-
+            
         #Config the window app
         main_w.geometry('800x500') # Size
         main_w.configure(bg = 'white') # Background color
@@ -22,7 +23,7 @@ class App():
             
             main_w,
             text = "Predecir número",
-            command = lambda: predice(0),
+            command = lambda: predice(randint(0,6000)),
             width= 50,
             justify = CENTER,
             relief = FLAT,
