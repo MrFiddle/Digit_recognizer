@@ -1,5 +1,6 @@
 from tkinter import *
 from tkinter import messagebox
+from Predictor import predice
 
 class App():
     def __init__(self):
@@ -20,8 +21,8 @@ class App():
         B = Button(
             
             main_w,
-            text = "Tomar foto",
-            command = lambda: hola(),
+            text = "Predecir número",
+            command = lambda: predice(0),
             width= 50,
             justify = CENTER,
             relief = FLAT,
@@ -34,6 +35,24 @@ class App():
             foreground = "WHITE",
             
             ).place(x = 170, y = 250)
+
+        S = Button(
+
+            main_w,
+            text = "Salir",
+            command = quit,
+            width= 50,
+            justify = CENTER,
+            relief = FLAT,
+            font = "Arial",
+
+            activebackground = "WHITE",
+            activeforeground = "BLACK",
+
+            background = "BLACK",
+            foreground = "WHITE",
+            
+            ).place(x = 170, y = 300)
 
         #Labels
 
