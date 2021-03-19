@@ -21,10 +21,7 @@ def predice(i):
     y_pred = model.predict_classes(im2arr)
     print(y_pred)
     plt.imshow(entrada, cmap='gray')
+    titulo = "El número predicho es: " + str(y_pred[0])
+    plt.title(titulo)
     plt.show()
     return y_pred
-
-#Image = cv2.imread("bordes.png")
-#predice(Image)
-a = random.randrange(0, 9999, 1)
-predice(a)
