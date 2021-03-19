@@ -11,7 +11,6 @@ https://github.com/keras-team/keras-io/blob/master/examples/vision/mnist_convnet
 * NumPy 1.19.5<br/>
 * Pillow 8.1.2<br/>
 * Tensorflow 2.4.1<br/>
-* OS <br/>
 
 
 ### TKinter en Linux
