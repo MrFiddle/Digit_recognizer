@@ -12,11 +12,11 @@ input_shape = (28, 28, 1)
 # aplicamos bitwise_not para obtener fondos blancos y numeros negros como en un papel
 (x_train, y_train), (x_test, y_test) = keras.datasets.mnist.load_data()
 for i in range(len(x_train)):
-    x_train[i] = cv2.bitwise_not(x_train[i])
     x_train[i] = cv2.Canny(x_train[i],100,200)
+    x_train[i] = cv2.bitwise_not(x_train[i])
 for i in range(len(x_test)):
-    x_test[i] = cv2.bitwise_not(x_test[i])
     x_test[i] = cv2.Canny(x_test[i],100,200)
+    x_test[i] = cv2.bitwise_not(x_test[i])
 
 
 # Scale images to the [0, 1] range
