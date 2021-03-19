@@ -35,7 +35,7 @@ class App():
             background = "BLACK",
             foreground = "WHITE",
             
-            ).place(x = 170, y = 250)
+            ).place(x = 100, y = 250)
 
         S = Button(
 
@@ -53,7 +53,7 @@ class App():
             background = "BLACK",
             foreground = "WHITE",
             
-            ).place(x = 170, y = 300)
+            ).place(x = 100, y = 300)
 
         #Labels
 
