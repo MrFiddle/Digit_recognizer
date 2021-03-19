@@ -1,8 +1,10 @@
 from tkinter import *
 from tkinter import messagebox
 from Predictor import predice
+import random
 
 class App():
+    a = random.randrange(0, 9999, 1)
     def __init__(self):
 
         main_w = Tk()
@@ -22,7 +24,7 @@ class App():
             
             main_w,
             text = "Predecir número",
-            command = lambda: predice(0),
+            command = lambda: predice(a),
             width= 50,
             justify = CENTER,
             relief = FLAT,
